@@ -81,6 +81,40 @@
             #binding-cells = <2>;
             tapping-term-ms = <3333>;
         };
+
+        hm_shift_l: hm_shift_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DUMMY3";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <3333>;
+        };
+
+        hm_shift_r: hm_shift_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DUMMY4";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <3333>;
+        };
+
+        swapper: dummyswapper {
+            compatible = "zmk,behavior-caps-word";
+            label = "DUMMYSWAPPER";
+            #binding-cells = <0>;
+            continue-list = <E>;
+        };
+
+        cappy: cappy {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAPPY";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+        };
     };
 
     keymap {
