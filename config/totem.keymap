@@ -139,9 +139,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q       &kp W       &kp F        &kp P        &kp G        &kp J    &kp L        &kp U        &kp Y       &kp SEMI
+       &kp GRAVE   &kp A       &kp PERIOD   &kp P        &kp Y        &kp F    &kp G        &kp C        &kp R       &kp Q
        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp D        &kp H    &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
-&kp Q  &kp Z       &kp X       &kp C        &kp V        &kp B        &kp K    &kp M        &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
+&kp Q  &none       &kp X       &kp C        &kp V        &kp B        &kp K    &kp M        &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
                                &kp DEL      &lt NAV TAB  &kp SPACE    &kp RET  &lt SYM ESC  &kp BSPC
             >;
         };
