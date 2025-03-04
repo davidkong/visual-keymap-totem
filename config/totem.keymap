@@ -19,10 +19,8 @@
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31
 #define KEYS_T 32 33 34 35 36 37
 #define CAPPY_IGNORE_KEYS 16 18
-
 #define HM_TAPPING_TERM 300
 #define HM_TAPPING_TERM_FAST 200
-
 #define BASE 0
 #define NAV  1
 #define SYM  2
@@ -31,11 +29,11 @@
 #define TVP2 5
 
 &mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
+    tapping-term-ms = <300>;
 };
+
+&sk { quick-release; };
 
 / {
     combos {
@@ -72,7 +70,6 @@
     };
 
     behaviors {
-
         // Positional Homerow mods
         // Homerow mods that prevent accidental activations when rolling keys,
         // such as when typing `st` or `ne` on colemak-dh layouts or `as` on
@@ -81,20 +78,21 @@
         // Works by only allowing a mod to activate within tapping-term if
         // it's on the opposite side of the keyboard or on the same side thumb
         // keys.
-
         // Further optimization using urob's timerless homerow mods method:
         // https://github.com/urob/zmk-config#timeless-homerow-mods
+
         hm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
             #binding-cells = <2>;
-            bindings = <&kp>,  <&kp>;
+            bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             global-quick-tap; // instead of global-quick-tap-ms
             // global-quick-tap-ms = <150>;         // requires PR #1387
+
             hold-trigger-key-positions = <KEYS_R KEYS_T>;
             hold-trigger-on-release;
         };
@@ -110,14 +108,15 @@
             quick_tap_ms = <175>;
             global-quick-tap; // instead of global-quick-tap-ms
             // global-quick-tap-ms = <150>;         // requires PR #1387
+
             hold-trigger-key-positions = <KEYS_L KEYS_T>;
             hold-trigger-on-release;
         };
 
-
         // Positional Homerow mods for shift
         // Use faster tapping term and disable some features that may
         // cause false negatives.
+
         hm_shift_l: hm_shift_l {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_FAST_LEFT";
@@ -129,7 +128,9 @@
             quick_tap_ms = <175>;
             global-quick-tap; // instead of global-quick-tap-ms
             // global-quick-tap-ms = <150>;         // requires PR #1387
+
             hold-trigger-key-positions = <KEYS_R KEYS_T>;
+
             // hold-trigger-on-release;
         };
 
@@ -144,7 +145,9 @@
             quick_tap_ms = <175>;
             global-quick-tap; // instead of global-quick-tap-ms
             // global-quick-tap-ms = <150>;         // requires PR #1387
+
             hold-trigger-key-positions = <KEYS_L KEYS_T>;
+
             // hold-trigger-on-release;
         };
 
@@ -157,6 +160,7 @@
          * Tap-Tap-Hold: Repeat T
          * Hold: LSHIFT
          */
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -170,26 +174,30 @@
 
         // DK: Combining Hold Tap and Sticky Key to closely link my two Caps options
         // implement in the keymap like this: `&cappy LEFT_SHIFT 0`, with 0 being a dummy value passed into caps word
+
         cappy: cappy {
             compatible = "zmk,behavior-hold-tap";
             label = "CAPPY";
             #binding-cells = <2>;
-            bindings = <&caps_word>, <&sk>; 
+            bindings = <&caps_word>, <&sk>;
+
             flavor = "balanced";
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick_tap_ms = <200>;
             tapping-term-ms = <200>;
         };
-        
+
         // Swapper for smart alt+tab
+
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";
             label = "SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+
             ignored-key-positions = <CAPPY_IGNORE_KEYS>;
         };
-};
+    };
 
     keymap {
         compatible = "zmk,keymap";
