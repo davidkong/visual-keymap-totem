@@ -190,14 +190,6 @@
             ignored-key-positions = <CAPPY_IGNORE_KEYS>;
         };
 };
-&sk {
-            quick-release; // avoid double capsing when typing fast
-        };
-&mt {
-    //    DK: only used for single quote / backtic right now. May need to move to a behavior if I want different mod-tap keys with different terms
-    tapping-term-ms = <300>; 
-    flavor = "tap-preferred";
-};
 
     keymap {
         compatible = "zmk,keymap";
