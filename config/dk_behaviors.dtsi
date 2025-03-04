@@ -1,8 +1,7 @@
 // Make sure settings.dtsi is included before this file
+// Make sure dk_behavior_key_definitions.dtsi is included before this file
 
-#define KEYS_L 13 14 15 16 17 27 28 29 30 31 41 42 43 44 45
-#define KEYS_R 20 21 22 23 24 34 35 36 37 38 50 51 52 53 54
-#define KEYS_T 46 47 48 49 60 61 62 63 64 65
+#include <dk_behavior_key_definitions.dtsi>
 
 #define HM_TAPPING_TERM 300
 #define HM_TAPPING_TERM_FAST 200
@@ -125,7 +124,7 @@
             label = "SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <28>, <35>, <37>;
+            ignored-key-positions = <CAPPY_IGNORE_KEYS>;
         };
     };
 };
