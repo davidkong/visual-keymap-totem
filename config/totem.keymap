@@ -189,7 +189,6 @@
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
             ignored-key-positions = <CAPPY_IGNORE_KEYS>;
         };
-    };
 };
 &sk {
             quick-release; // avoid double capsing when typing fast
