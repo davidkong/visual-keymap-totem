@@ -193,6 +193,15 @@
         };
 
         // Swapper for smart alt+tab
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            ignored-key-positions = <28>, <35>, <37>;
+        };
+        // End Swapper
+        
     };
 
     keymap {
