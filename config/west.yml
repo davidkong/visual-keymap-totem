@@ -11,6 +11,7 @@ manifest:
       import: app/west.yml
     
     - name: zmk-tri-state
-      path: modules/zmk/tri-state
+      remote: dhruvinsh
+      revision: main
   self:
     path: config
