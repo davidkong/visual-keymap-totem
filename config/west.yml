@@ -9,5 +9,8 @@ manifest:
       remote: urob
       revision: main
       import: app/west.yml
+    
+    - name: zmk-tri-state
+      path: modules/zmk/tri-state
   self:
     path: config
