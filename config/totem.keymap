@@ -170,9 +170,17 @@
             quick_tap_ms = <200>;
         };
 
+        // Swapper for smart alt+tab
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            ignored-key-positions = <16>, <18>;
+        };
+
         // DK: Combining Hold Tap and Sticky Key to closely link my two Caps options
         // implement in the keymap like this: `&cappy LEFT_SHIFT 0`, with 0 being a dummy value passed into caps word
-
         cappy: cappy {
             compatible = "zmk,behavior-hold-tap";
             label = "CAPPY";
@@ -184,17 +192,6 @@
             quick_tap_ms = <200>;
             tapping-term-ms = <200>;
         };
-
-        // Swapper for smart alt+tab
-        swapper: swapper {
-            compatible = "zmk,behavior-tri-state";
-            label = "SWAPPER";
-            #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <16>, <18>;
-        };
-
-        // End Swapper
     };
 
     keymap {
