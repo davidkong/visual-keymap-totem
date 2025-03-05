@@ -11,7 +11,9 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31
@@ -286,10 +288,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &none                                    &kp LG(TILDE)         &none                     &none                       &none    &none         &kp LA(LG(LEFT_ARROW))  &kp UP       &kp LA(LG(RIGHT_ARROW))  &none
-       &hm_l LEFT_CONTROL LS(LG(LC(NUMBER_4)))  &hm_l LEFT_ALT LG(C)  &hm_l LEFT_COMMAND LG(V)  &hm_l LEFT_SHIFT LS(LG(A))  &none    &kp CAPSLOCK  &kp LEFT                &kp DOWN     &kp RIGHT                &none
-&none  &none                                    &kp LS(LC(MINUS))     &kp LS(LC(LA(LG(B))))     &kp LC(MINUS)               &none    &none         &none                   &kp PAGE_UP  &kp PAGE_DOWN            &none  &none
-                                                                      &none                     &none                       &none    &none         &kp RET                 &kp TAB
+        &none                                    &kp LG(TILDE)         &none                     &none                       &none    &none         &kp LA(LG(LEFT_ARROW))  &kp UP       &kp LA(LG(RIGHT_ARROW))  &none
+        &hm_l LEFT_CONTROL LS(LG(LC(NUMBER_4)))  &hm_l LEFT_ALT LG(C)  &hm_l LEFT_COMMAND LG(V)  &hm_l LEFT_SHIFT LS(LG(A))  &none    &kp CAPSLOCK  &kp LEFT                &kp DOWN     &kp RIGHT                &none
+&trans  &none                                    &kp LS(LC(MINUS))     &kp LS(LC(LA(LG(B))))     &kp LC(MINUS)               &none    &none         &none                   &kp PAGE_UP  &kp PAGE_DOWN            &none  &trans
+                                                                       &none                     &none                       &none    &none         &kp RET                 &kp TAB
             >;
         };
 
@@ -312,10 +314,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp TAB     &kp I      &kp LC(LALT)  &kp O        &kp LC(F20)    &none  &none  &none  &none  &none
-       &lt TVP2 L  &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
-&kp J  &kp LSHFT   &kp LC(C)  &kp BSPC      &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
-                              &trans        &kp LC(F14)  &kp LC(F13)    &none  &none  &none
+        &none  &none  &bt BT_CLR  &none  &none    &none         &none             &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none
+        &none  &none  &none       &none  &none    &out OUT_TOG  &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &none
+&trans  &none  &none  &none       &none  &none    &none         &bt BT_SEL 0      &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3  &trans
+                      &none       &none  &none    &none         &kp C_PLAY_PAUSE  &none
             >;
         };
 
