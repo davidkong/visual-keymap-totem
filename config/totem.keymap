@@ -238,7 +238,7 @@
             bindings = <
         &none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none        &none  &none                 &kp COLON                 &none                  &none
         &none  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS     &none  &hm_r RIGHT_SHIFT AT  &hm_r LEFT_COMMAND MINUS  &hm_r LEFT_ALT DOLLAR  &kp RIGHT_CONTROL
-&trans  &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL    &none  &none                 &none                     &none                  &none              &none
+&trans  &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL    &none  &none                 &none                     &none                  &none              &trans
                              &none         &kp NUMBER_0  &trans       &none  &none                 &none
             >;
         };
@@ -262,10 +262,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &gif      &mo ADJ      &trans        &kp C_PP        &trans
+        &none          &kp LESS_THAN         &kp PIPE           &kp GREATER_THAN       &kp POUND       &none  &none           &kp PERCENT       &kp TILDE          &none
+        &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp RIGHT_PARENTHESIS  &kp PLUS        &none  &kp LEFT_BRACE  &kp MINUS         &kp RIGHT_BRACE    &kp CARET
+&trans  &none          &kp COLON             &kp SEMICOLON      &kp EQUAL              &kp ASTERISK    &none  &kp AMPERSAND   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none      &trans
+                                             &kp QUESTION       &kp SLASH              &kp EXCL        &none  &none           &none
             >;
         };
 
