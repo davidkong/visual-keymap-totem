@@ -14,6 +14,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31
@@ -171,16 +172,19 @@
         };
 
         // Swapper for smart alt+tab
+
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";
             label = "SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+
             ignored-key-positions = <16>, <18>;
         };
 
         // DK: Combining Hold Tap and Sticky Key to closely link my two Caps options
         // implement in the keymap like this: `&cappy LEFT_SHIFT 0`, with 0 being a dummy value passed into caps word
+
         cappy: cappy {
             compatible = "zmk,behavior-hold-tap";
             label = "CAPPY";
@@ -216,10 +220,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp GRAVE                 &kp A             &kp PERIOD        &kp P               &kp Y                         &kp F            &kp G                &kp C              &kp R              &kp Q
-       &hm_l LEFT_CONTROL COMMA  &hm_l LEFT_ALT O  &hm_l LEFT_GUI E  &hm_l LEFT_SHIFT U  &kp I                         &kp D            &hm_r RIGHT_SHIFT H  &hm_r RIGHT_GUI T  &hm_r RIGHT_ALT N  &hm_r RIGHT_CONTROL J
-&none  &none                     &kp L             &kp S             &kp K               &kp X                         &kp B            &kp M                &kp W              &kp V              &kp Z                  &none
-                                                   &lt 4 UNDERSCORE  &lt 3 ESCAPE        &cappy NUMBER_0 LEFT_SHIFT    &lt 1 BACKSPACE  &lt SYM SPACE        &none
+           &kp GRAVE                 &kp A             &kp PERIOD        &kp P               &kp Y                         &kp F            &kp G                &kp C              &kp R              &kp Q
+           &hm_l LEFT_CONTROL COMMA  &hm_l LEFT_ALT O  &hm_l LEFT_GUI E  &hm_l LEFT_SHIFT U  &kp I                         &kp D            &hm_r RIGHT_SHIFT H  &hm_r RIGHT_GUI T  &hm_r RIGHT_ALT N  &hm_r RIGHT_CONTROL J
+&mkp LCLK  &none                     &kp L             &kp S             &kp K               &kp X                         &kp B            &kp M                &kp W              &kp V              &kp Z                  &none
+                                                       &lt 4 UNDERSCORE  &lt 3 ESCAPE        &cappy NUMBER_0 LEFT_SHIFT    &lt 1 BACKSPACE  &lt SYM SPACE        &none
             >;
         };
 
