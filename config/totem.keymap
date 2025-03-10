@@ -300,7 +300,7 @@
         &none                                    &kp LG(TILDE)         &swapper                  &none                       &none    &none         &kp LA(LG(LEFT_ARROW))  &kp UP       &kp LA(LG(RIGHT_ARROW))  &none
         &hm_l LEFT_CONTROL LS(LG(LC(NUMBER_4)))  &hm_l LEFT_ALT LG(C)  &hm_l LEFT_COMMAND LG(V)  &hm_l LEFT_SHIFT LS(LG(A))  &none    &kp CAPSLOCK  &kp LEFT                &kp DOWN     &kp RIGHT                &none
 &trans  &none                                    &kp LS(LC(MINUS))     &kp LS(LC(LA(LG(B))))     &kp LC(MINUS)               &none    &none         &none                   &kp PAGE_UP  &kp PAGE_DOWN            &none  &trans
-                                                                       &none                     &none                       &none    &none         &kp RET                 &kp TAB
+                                                                       &none                     &none                       &none    &kp ENTER     &kp TAB                 &none
             >;
         };
 
