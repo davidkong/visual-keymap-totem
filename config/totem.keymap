@@ -43,10 +43,9 @@
             bindings = <&kp APOSTROPHE>;
         };
 
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog TVP1>;
+        vimac_combo {
+            bindings = <&kp LS(LA(LC(LG(Y))))>;
+            key-positions = <17 18>;
         };
     };
 
