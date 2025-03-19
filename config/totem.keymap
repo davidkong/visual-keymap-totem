@@ -42,11 +42,6 @@
             key-positions = <1 2>;
             bindings = <&kp APOSTROPHE>;
         };
-
-        vimac_combo {
-            bindings = <&kp LS(LA(LC(LG(Y))))>;
-            key-positions = <17 18>;
-        };
     };
 
     macros {
