@@ -213,10 +213,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp GRAVE                 &kp A             &kp PERIOD        &kp P               &kp Y                         &kp F            &kp G                &kp C              &kp R              &kp Q
-         &hm_l LEFT_CONTROL COMMA  &hm_l LEFT_ALT O  &hm_l LEFT_GUI E  &hm_l LEFT_SHIFT U  &kp I                         &kp D            &hm_r RIGHT_SHIFT H  &hm_r RIGHT_GUI T  &hm_r RIGHT_ALT N  &hm_r RIGHT_CONTROL J
-&kp F24  &none                     &kp L             &kp S             &kp K               &kp X                         &kp B            &kp M                &kp W              &kp V              &kp Z                  &none
-                                                     &lt 4 UNDERSCORE  &lt 3 ESCAPE        &cappy NUMBER_0 LEFT_SHIFT    &lt 1 BACKSPACE  &lt SYM SPACE        &none
+       &kp GRAVE                 &kp A             &kp PERIOD        &kp P               &kp Y                         &kp F            &kp G                &kp C              &kp R              &kp Q
+       &hm_l LEFT_CONTROL COMMA  &hm_l LEFT_ALT O  &hm_l LEFT_GUI E  &hm_l LEFT_SHIFT U  &kp I                         &kp D            &hm_r RIGHT_SHIFT H  &hm_r RIGHT_GUI T  &hm_r RIGHT_ALT N  &hm_r RIGHT_CONTROL J
+&none  &kp F24                   &kp L             &kp S             &kp K               &kp X                         &kp B            &kp M                &kp W              &kp V              &kp Z                  &none
+                                                   &lt 4 UNDERSCORE  &lt 3 ESCAPE        &cappy NUMBER_0 LEFT_SHIFT    &lt 1 BACKSPACE  &lt SYM SPACE        &none
             >;
         };
 
@@ -347,6 +347,15 @@
         &trans       &kp LS(LEFT)  &kp LC(F17)   &kp LS(RIGHT)  &kp RET        &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &kp J        &kp LS(C)     &kp LC(F16)   &kp LS(V)      &kp LC(F15)    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                    &trans        &kp LC(F12)    &kp LC(F11)    &trans  &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
