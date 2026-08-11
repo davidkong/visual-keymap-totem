@@ -220,7 +220,7 @@
                        &kp GRAVE                 &kp A             &kp PERIOD        &kp P               &kp Y                         &kp F            &kp G                &kp C              &kp R              &kp Q
                        &hm_l LEFT_CONTROL COMMA  &hm_l LEFT_ALT O  &hm_l LEFT_GUI E  &hm_l LEFT_SHIFT U  &kp I                         &kp D            &hm_r RIGHT_SHIFT H  &hm_r RIGHT_GUI T  &hm_r RIGHT_ALT N  &hm_r RIGHT_CONTROL J
 &kp LS(LA(LC(LG(M))))  &kp F24                   &kp L             &kp S             &kp K               &kp X                         &kp B            &kp M                &kp W              &kp V              &kp Z                  &none
-                                                                   &lt 4 UNDERSCORE  &lt 3 ESCAPE        &cappy NUMBER_0 LEFT_SHIFT    &lt 1 BACKSPACE  &lt SYM SPACE        &kp LC(SPACE)
+                                                                   &lt 4 UNDERSCORE  &lt 3 ESCAPE        &cappy NUMBER_0 LEFT_SHIFT    &lt 1 BACKSPACE  &lt SYM SPACE        &none
             >;
         };
 
@@ -297,7 +297,7 @@
             bindings = <
         &kp F22                                  &kp LG(TILDE)         &swapper                  &kp F23                     &none    &none                  &kp LA(LG(LEFT_ARROW))  &kp UP       &kp LA(LG(RIGHT_ARROW))  &none
         &hm_l LEFT_CONTROL LS(LG(LC(NUMBER_4)))  &hm_l LEFT_ALT LG(C)  &hm_l LEFT_COMMAND LG(V)  &hm_l LEFT_SHIFT LS(LG(A))  &none    &kp CAPSLOCK           &kp LEFT                &kp DOWN     &kp RIGHT                &none
-&trans  &none                                    &kp LS(LC(MINUS))     &kp LS(LC(LA(LG(B))))     &kp LC(MINUS)               &none    &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(LG(Y))))   &kp PAGE_UP  &kp PAGE_DOWN            &none  &trans
+&trans  &none                                    &kp LS(LC(MINUS))     &kp LS(LC(LA(B)))         &kp LC(MINUS)               &none    &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(LG(Y))))   &kp PAGE_UP  &kp PAGE_DOWN            &none  &trans
                                                                        &none                     &none                       &none    &kp ENTER              &kp TAB                 &none
             >;
         };
